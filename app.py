@@ -146,7 +146,6 @@ with cols[1]:
 
     fig.update_layout(
         template='plotly_dark',
-        dragmode=False,
         title = dict(
             x=0.5,
             xanchor='center',
