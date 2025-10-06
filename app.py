@@ -41,7 +41,7 @@ df.dropna(subset=['price', 'surface_area', 'province'], inplace=True)
 
 @st.cache_data
 def load_geojson():
-    with open('static/provinces_simple.geojson') as f:
+    with open('static/provinces_netherlands.geojson') as f:
         GEO_DATA = json.load(f)
     return GEO_DATA
 
@@ -116,7 +116,11 @@ with cols[0]:
             marker=dict(color='red', size=10, symbol='x'),
             name='Highlighted Listings'
         )
-    fig.update_layout(showlegend=False, height=400, margin={"r":0,"t":30,"l":0,"b":0})
+    fig.update_layout(
+        showlegend=False, 
+        height=400, margin={"r":0,"t":30,"l":0,"b":0},
+        dragmode=False,
+    )
 
     st.plotly_chart(fig, use_container_width=True, config=config)
 
@@ -142,6 +146,7 @@ with cols[1]:
 
     fig.update_layout(
         template='plotly_dark',
+        dragmode=False,
         title = dict(
             x=0.5,
             xanchor='center',
