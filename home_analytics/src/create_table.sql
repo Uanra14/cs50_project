@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS listings (
     wonen INTEGER,
     slaapkamers INTEGER,
     energielabel TEXT,
-    price INTEGER
+    price INTEGER,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 

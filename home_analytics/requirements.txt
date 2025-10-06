@@ -1,1 +1,5 @@
-funda-scraper
+beautifulsoup4
+pandas
+plotly-express
+streamlit
+duckdb
