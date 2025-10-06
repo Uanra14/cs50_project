@@ -132,7 +132,7 @@ class FundaScraper:
         self.log.append(f"Scraped {len(self.listings)} listings.")
         self.log.append(f"Found {self.duplicate_listings} duplicate listings.")
 
-        with open("/mnt/c/Users/arnau/PythonPrograms/cs50_project/home_analytics/logs/scraper.log", "a") as f:
+        with open("../logs/scraper.log", "a") as f:
             f.writelines("\n".join(self.log) + "\n\n")
 
     def scrape_funda(self, N):
@@ -143,3 +143,4 @@ class FundaScraper:
             self.scrape_listing(full_url)
     
         db.close()
+
