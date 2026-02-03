@@ -122,7 +122,7 @@ with cols[0]:
         dragmode=False,
     )
 
-    st.plotly_chart(fig, use_container_width=True, config=config)
+    st.plotly_chart(fig, width="stretch", config=config)
 
 with cols[1]:
     # Create a map colored by average price per province, make background black
@@ -178,7 +178,7 @@ with cols[1]:
             marker_line_color=df_grouped['is_selected'].map({True: 'red', False: 'black'})
         )
 
-    st.plotly_chart(fig, use_container_width=True, config=config)
+    st.plotly_chart(fig, width="stretch", config=config)
 
 ### --- FOOTER --- ###
 
