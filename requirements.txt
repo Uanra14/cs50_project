@@ -1,5 +1,6 @@
 beautifulsoup4
 pandas
 plotly-express
-streamlit
 duckdb
+streamlit==1.19.0
+altair<5
